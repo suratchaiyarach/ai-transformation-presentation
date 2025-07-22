@@ -549,20 +549,13 @@
     <div class="container">
         <!-- Overview Tab -->
         <div id="overview" class="tab-content active">
-            <div class="profile-section fade-in">
-                <div class="profile-image" id="profileImage">
-                    👨‍💼
-                    <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="loadImage(event)">
-                </div>
-                <div class="profile-info">
-                    <h2>AI Transformation Journey</h2>
-                    <p>Welcome to my comprehensive overview of how AI has revolutionized my work routine and productivity. This presentation showcases the measurable impact and breakthrough capabilities achieved through strategic AI implementation.</p>
-                    <div class="file-upload">
-                        <button class="upload-btn" onclick="document.getElementById('imageUpload').click()">
-                            📸 Upload Your Photo
-                        </button>
-                    </div>
-                </div>
+                   <div class="profile-image" id="profileImage">
+            <img src="Image.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2>AI Transformation Journey</h2>
+            <p>Welcome to my comprehensive overview of how AI has revolutionized my work routine and productivity. This presentation showcases the measurable impact and breakthrough capabilities achieved through strategic AI implementation.</p>
+        </div>
             </div>
 
             <div class="achievements fade-in">
@@ -1070,17 +1063,6 @@
             });
         }
 
-        function loadImage(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const profileImage = document.getElementById('profileImage');
-                    profileImage.innerHTML = `<img src="${e.target.result}" alt="Profile Picture">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        }
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
