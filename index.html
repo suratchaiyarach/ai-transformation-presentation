@@ -464,341 +464,7 @@
             text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
         }
 
-        /* Showcase Styles */
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .showcase-card {
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 15px;
-            padding: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .showcase-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
-            border-color: #00ffff;
-        }
-
-        .showcase-media {
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .showcase-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .showcase-media video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .showcase-card:hover .showcase-media img {
-            transform: scale(1.05);
-        }
-
-        .media-type-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #00ffff;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .showcase-content {
-            padding: 25px;
-        }
-
-        .showcase-title {
-            color: #00ffff;
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .showcase-description {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .showcase-tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
-
-        .tech-tag {
-            background: linear-gradient(45deg, rgba(255, 255, 0, 0.2), rgba(255, 0, 255, 0.2));
-            border: 1px solid rgba(255, 255, 0, 0.5);
-            color: #ffff00;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .add-more-guide {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
-            border: 2px dashed rgba(0, 255, 255, 0.3);
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            color: #00ffff;
-            margin: 30px 0;
-        }
-
-        .add-more-guide h4 {
-            color: #ffff00;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        /* AI Tools Styles */
-        .ai-tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .ai-tool-card {
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 15px;
-            padding: 30px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .ai-tool-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
-            border-color: #00ffff;
-        }
-
-        .ai-tool-card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
-            border-radius: 15px;
-            z-index: -1;
-            animation: rotate 4s linear infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .ai-tool-card:hover::before {
-            opacity: 0.3;
-        }
-
-        .tool-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .tool-icon {
-            font-size: 3rem;
-            margin-right: 20px;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
-        }
-
-        .tool-info h3 {
-            color: #00ffff;
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-
-        .tool-info .tool-company {
-            color: #ffff00;
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        .tool-description {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .tool-use-cases {
-            margin-bottom: 20px;
-        }
-
-        .tool-use-cases h4 {
-            color: #ffff00;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .use-case-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .use-case-list li {
-            padding: 5px 0;
-            padding-left: 25px;
-            position: relative;
-            color: #ffffff;
-        }
-
-        .use-case-list li::before {
-            content: '⚡';
-            position: absolute;
-            left: 0;
-            color: #00ffff;
-        }
-
-        .tool-rating {
-            display: flex;
-            align-items: center;
-            margin-top: 15px;
-        }
-
-        .rating-label {
-            color: #ffff00;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        .stars {
-            color: #ffff00;
-            font-size: 1.2rem;
-        }
-
-        .confidentiality-section {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.1));
-            border: 1px solid rgba(255, 0, 0, 0.3);
-            border-radius: 15px;
-            padding: 40px;
-            margin: 50px 0;
-        }
-
-        .confidentiality-section h2 {
-            color: #ff6b6b;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .confidentiality-section h2::after {
-            background: linear-gradient(90deg, #ff6b6b, #ffff00);
-        }
-
-        .confidentiality-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .confidentiality-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            padding: 25px;
-        }
-
-        .confidentiality-card h4 {
-            color: #ffff00;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .confidentiality-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .confidentiality-card li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-            color: #ffffff;
-        }
-
-        .confidentiality-card li::before {
-            content: '🔒';
-            position: absolute;
-            left: 0;
-            font-size: 1rem;
-        }
-
-        .security-highlight {
-            background: linear-gradient(45deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 255, 0.1));
-            border: 1px solid rgba(0, 255, 0, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .security-highlight h3 {
-            color: #51cf66;
-            margin-bottom: 10px;
-        }
-
-        /* Responsive Design for AI Tools */
-        @media (max-width: 768px) {
-            .ai-tools-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .confidentiality-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .tool-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .tool-icon {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-        @media (max-width: 768px) {
-            .showcase-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .showcase-media {
-                height: 200px;
-            }
-        }
+        /* Responsive Design */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5rem;
@@ -843,7 +509,7 @@
 <body>
     <div class="header">
         <div class="container">
-            <h1>🤖 Transforming My Work Routine with AI</h1>
+            <h1>🤖 Transforming My Work Routine with AI By Surat Chaiyarach [M]</h1>
             <h2>How AI Tools Revolutionized My Daily Productivity</h2>
         </div>
     </div>
@@ -856,9 +522,8 @@
             <button class="tab-button" onclick="showTab('applications')">⚙️ Applications</button>
             <button class="tab-button" onclick="showTab('creative')">🎨 Creative</button>
             <button class="tab-button" onclick="showTab('impact')">📈 Impact</button>
+            <button class="tab-button" onclick="showTab('tools')">🤖 AI Tools</button>
             <button class="tab-button" onclick="showTab('future')">🚀 Future Plans</button>
-            <button class="tab-button" onclick="showTab('showcase')">🏆 Showcase</button>
-            <button class="tab-button" onclick="showTab('aitools')">🤖 AI Tools</button>
         </div>
     </nav>
 
@@ -872,486 +537,6 @@
                 <div class="profile-info">
                     <h2>AI Transformation Journey</h2>
                     <p>Welcome to my comprehensive overview of how AI has revolutionized my work routine and productivity. This presentation showcases the measurable impact and breakthrough capabilities achieved through strategic AI implementation.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Tools Tab -->
-        <div id="aitools" class="tab-content">
-            <div class="section fade-in">
-                <h2>🤖 AI Tools Arsenal</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
-                    Strategic selection of AI platforms that power my productivity transformation - each chosen for specific strengths and capabilities.
-                </p>
-
-                <div class="ai-tools-grid">
-                    <!-- Claude AI Tool -->
-                    <div class="ai-tool-card">
-                        <div class="tool-header">
-                            <div class="tool-icon">🧠</div>
-                            <div class="tool-info">
-                                <h3>Claude</h3>
-                                <div class="tool-company">by Anthropic</div>
-                            </div>
-                        </div>
-                        <div class="tool-description">
-                            Advanced AI assistant excelling in complex reasoning, analysis, and professional content creation. My primary tool for strategic planning, detailed documentation, and sophisticated problem-solving tasks.
-                        </div>
-                        <div class="tool-use-cases">
-                            <h4>Primary Use Cases:</h4>
-                            <ul class="use-case-list">
-                                <li>Coding and building an application</li>
-                                <li>Complex data analysis and interpretation</li>
-                                <li>Technical documentation and presentations</li>
-                                <li>Process optimization recommendations</li>
-                                <li>Industrial Engineering calculations</li>
-                                <li>Lean Manufacturing strategy development</li>
-                            </ul>
-                        </div>
-                        <div class="tool-rating">
-                            <span class="rating-label">Effectiveness:</span>
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-
-                    <!-- ChatGPT Tool -->
-                    <div class="ai-tool-card">
-                        <div class="tool-header">
-                            <div class="tool-icon">💬</div>
-                            <div class="tool-info">
-                                <h3>ChatGPT</h3>
-                                <div class="tool-company">by OpenAI</div>
-                            </div>
-                        </div>
-                        <div class="tool-description">
-                            Versatile conversational AI perfect for brainstorming, quick content generation, and iterative problem-solving. Excellent for rapid prototyping of ideas and creative content development.
-                        </div>
-                        <div class="tool-use-cases">
-                            <h4>Primary Use Cases:</h4>
-                            <ul class="use-case-list">
-                                <li>Training material content creation</li>
-                                <li>Email and communication drafting</li>
-                                <li>Brainstorming and idea generation</li>
-                                <li>Quick data formatting and cleaning</li>
-                                <li>Meeting agenda and summary creation</li>
-                                <li>Process improvement ideation</li>
-                            </ul>
-                        </div>
-                        <div class="tool-rating">
-                            <span class="rating-label">Effectiveness:</span>
-                            <span class="stars">⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-
-                    <!-- Gemini Tool -->
-                    <div class="ai-tool-card">
-                        <div class="tool-header">
-                            <div class="tool-icon">💎</div>
-                            <div class="tool-info">
-                                <h3>Gemini</h3>
-                                <div class="tool-company">by Google</div>
-                            </div>
-                        </div>
-                        <div class="tool-description">
-                            Google's multimodal AI offering strong integration with Google Workspace and excellent performance in research, data analysis, and multilingual tasks. Particularly useful for international operations.
-                        </div>
-                        <div class="tool-use-cases">
-                            <h4>Primary Use Cases:</h4>
-                            <ul class="use-case-list">
-                                <li>Generate VDO with VEO3</li>
-                                <li>Research and competitive analysis</li>
-                                <li>Multilingual content translation</li>
-                                <li>Integration with Google Workspace tools</li>
-                                <li>Market trend analysis and reporting</li>
-                                <li>Supply chain research and optimization</li>
-                            </ul>
-                        </div>
-                        <div class="tool-rating">
-                            <span class="rating-label">Effectiveness:</span>
-                            <span class="stars">⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-
-                    <!-- GenSpark Tool -->
-                    <div class="ai-tool-card">
-                        <div class="tool-header">
-                            <div class="tool-icon">⚡</div>
-                            <div class="tool-info">
-                                <h3>GenSpark</h3>
-                                <div class="tool-company">AI Search Engine</div>
-                            </div>
-                        </div>
-                        <div class="tool-description">
-                            Next-generation AI search engine that provides comprehensive, well-researched answers with real-time information. Excellent for staying current with industry trends and best practices.
-                        </div>
-                        <div class="tool-use-cases">
-                            <h4>Primary Use Cases:</h4>
-                            <ul class="use-case-list">
-                                <li>Create presentation</li>
-                            </ul>
-                        </div>
-                        <div class="tool-rating">
-                            <span class="rating-label">Effectiveness:</span>
-                            <span class="stars">⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tool Selection Strategy -->
-                <div class="example-box">
-                    <h4>🎯 Strategic Tool Selection Approach</h4>
-                    <div class="comparison">
-                        <div class="before">
-                            <h3>🧠 Complex Analysis & Strategy</h3>
-                            <ul>
-                                <li><strong>Claude:</strong> Lean implementation planning, detailed technical analysis</li>
-                                <li><strong>Use Case:</strong> Value stream mapping, Six Sigma project design</li>
-                                <li><strong>Strength:</strong> Deep reasoning and structured thinking</li>
-                            </ul>
-                        </div>
-                        <div class="after">
-                            <h3>💬 Rapid Content & Communication</h3>
-                            <ul>
-                                <li><strong>ChatGPT:</strong> Quick content generation, team communication</li>
-                                <li><strong>Use Case:</strong> Training materials, meeting summaries</li>
-                                <li><strong>Strength:</strong> Speed and conversational interface</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="comparison">
-                        <div class="before">
-                            <h3>💎 Research & Integration</h3>
-                            <ul>
-                                <li><strong>Gemini:</strong> Data analysis, workspace integration</li>
-                                <li><strong>Use Case:</strong> Google Sheets automation, research</li>
-                                <li><strong>Strength:</strong> Google ecosystem integration</li>
-                            </ul>
-                        </div>
-                        <div class="after">
-                            <h3>⚡ AI Agent- Auto create Presentation</h3>
-                            <ul>
-                                <li><strong>GenSpark:</strong> Create Presentation</li>
-                                <li><strong>Use Case:</strong> Industry benchmarking, competitive analysis</li>
-                                <li><strong>Strength:</strong> -</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Data Confidentiality Section -->
-            <div class="confidentiality-section fade-in">
-                <h2>🔒 Data Confidentiality & Security Management</h2>
-                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">
-                    Comprehensive approach to maintaining data security and confidentiality while leveraging AI tools for maximum productivity.
-                </p>
-
-                <div class="security-highlight">
-                    <h3>🛡️ Zero Sensitive Data Exposure Policy</h3>
-                    <p>All AI interactions follow strict protocols to ensure no confidential company data, personal information, or proprietary processes are ever shared with external AI services.</p>
-                </div>
-
-                <div class="confidentiality-grid">
-                    <div class="confidentiality-card">
-                        <h4>📊 Data Classification & Handling</h4>
-                        <ul>
-                            <li>Clear data classification system (Public, Internal, Confidential, Restricted)</li>
-                            <li>Only anonymized and generalized data used for AI assistance</li>
-                            <li>Removal of all identifying information before processing</li>
-                            <li>Template-based approaches for sensitive analyses</li>
-                            <li>Regular data handling protocol reviews and updates</li>
-                        </ul>
-                    </div>
-
-                    <div class="confidentiality-card">
-                        <h4>🔐 Access Control & Authentication</h4>
-                        <ul>
-                            <li>Multi-factor authentication on all AI platforms</li>
-                            <li>Regular password updates and security reviews</li>
-                            <li>Controlled access to AI tools through approved channels</li>
-                            <li>Session management and automatic logout policies</li>
-                            <li>Device-level security controls and monitoring</li>
-                        </ul>
-                    </div>
-
-                    <div class="confidentiality-card">
-                        <h4>📝 Content Sanitization Process</h4>
-                        <ul>
-                            <li>Systematic removal of specific company names and identifiers</li>
-                            <li>Replacement of actual numbers with representative examples</li>
-                            <li>Use of generic industry terminology instead of proprietary terms</li>
-                            <li>Focus on methodologies rather than specific implementations</li>
-                            <li>Pre-submission content review checklist</li>
-                        </ul>
-                    </div>
-
-                    <div class="confidentiality-card">
-                        <h4>🔍 Monitoring & Compliance</h4>
-                        <ul>
-                            <li>Regular audit trails of AI tool usage and content</li>
-                            <li>Compliance verification with company data policies</li>
-                            <li>Incident reporting and response procedures</li>
-                            <li>Staff training on data confidentiality best practices</li>
-                            <li>Continuous improvement of security protocols</li>
-                        </ul>
-                    </div>
-
-                    <div class="confidentiality-card">
-                        <h4>⚖️ Legal & Regulatory Compliance</h4>
-                        <ul>
-                            <li>Adherence to industry-specific data protection regulations</li>
-                            <li>Compliance with international data privacy laws (GDPR, etc.)</li>
-                            <li>Regular legal review of AI tool terms of service</li>
-                            <li>Documentation of compliance measures and procedures</li>
-                            <li>Coordination with legal and IT security teams</li>
-                        </ul>
-                    </div>
-
-                    <div class="confidentiality-card">
-                        <h4>🛠️ Technical Safeguards</h4>
-                        <ul>
-                            <li>Use of secure, encrypted connections for all AI interactions</li>
-                            <li>Local data processing where possible before AI consultation</li>
-                            <li>Regular backup and secure deletion of conversation histories</li>
-                            <li>Network-level security controls and monitoring</li>
-                            <li>Endpoint protection and data loss prevention tools</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="example-box">
-                    <h4>✅ Best Practice Example</h4>
-                    <p><strong>Instead of:</strong> "Our Acme Corp factory produces 50,000 units of Model X garments with 3.2% defect rate using proprietary Process Alpha..."</p>
-                    <br>
-                    <p><strong>I use:</strong> "A typical garment factory producing medium-volume orders might experience defect rates around 3%, which can be improved through statistical process control methods..."</p>
-                    <br>
-                    <p><strong>Result:</strong> Valuable AI insights without exposing any confidential company information, product details, or proprietary processes.</p>
-                </div>
-
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">Data Confidentiality Maintained</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">0</div>
-                        <div class="stat-label">Security Incidents</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">24/7</div>
-                        <div class="stat-label">Security Monitoring</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">Monthly</div>
-                        <div class="stat-label">Security Reviews</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Showcase Tab -->
-        <div id="showcase" class="tab-content">
-            <div class="section fade-in">
-                <h2>🏆 AI Projects Showcase</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
-                    Real implementations and achievements - showcasing completed AI solutions with measurable results and visual demonstrations.
-                </p>
-
-                <div class="showcase-grid">
-                    <!-- Project 1 - Replace IMAGE_FILE_1.jpg with your actual image filename -->
-                    <div class="showcase-card">
-                        <div class="showcase-media">
-                            <img src="IMAGE_FILE_1.jpg" alt="AI Data Analytics Dashboard">
-                            <div class="media-type-badge">📊 IMAGE</div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-title">Production Analytics Dashboard</div>
-                            <div class="showcase-description">
-                                AI-powered real-time dashboard that transformed our data analysis process. Automated data collection from multiple sources, providing instant insights and predictive analytics for production optimization.
-                                <br><br>
-                                <strong>Results:</strong> 90% time reduction, 100% accuracy, real-time decision making capability.
-                            </div>
-                            <div class="showcase-tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">Data Visualization</span>
-                                <span class="tech-tag">Real-time Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 - Replace VIDEO_FILE_1.mp4 with your actual video filename -->
-                    <div class="showcase-card">
-                        <div class="showcase-media">
-                            <video controls>
-                                <source src="VIDEO_FILE_1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="media-type-badge">🎥 VIDEO</div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-title">AI Presentation Generator Demo</div>
-                            <div class="showcase-description">
-                                Live demonstration of AI-powered presentation creation tool. Watch how complex data analysis is transformed into professional presentations in minutes instead of hours.
-                                <br><br>
-                                <strong>Impact:</strong> 92% time savings, consistent professional quality, automated chart generation.
-                            </div>
-                            <div class="showcase-tech-stack">
-                                <span class="tech-tag">AI Automation</span>
-                                <span class="tech-tag">Data Processing</span>
-                                <span class="tech-tag">Content Generation</span>
-                                <span class="tech-tag">Workflow Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 - Replace IMAGE_FILE_2.jpg with your actual image filename -->
-                    <div class="showcase-card">
-                        <div class="showcase-media">
-                            <img src="IMAGE_FILE_2.jpg" alt="Cutting Machine Log Analyzer">
-                            <div class="media-type-badge">📊 IMAGE</div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-title">Auto Cutting Machine Log Analyzer</div>
-                            <div class="showcase-description">
-                                Custom AI application for analyzing thousands of machine log entries. Provides descriptive, diagnostic, predictive, and prescriptive analytics for production optimization.
-                                <br><br>
-                                <strong>Achievements:</strong> 25% downtime reduction, 15% accuracy improvement, 80% failure prevention.
-                            </div>
-                            <div class="showcase-tech-stack">
-                                <span class="tech-tag">Predictive Analytics</span>
-                                <span class="tech-tag">Machine Learning</span>
-                                <span class="tech-tag">IoT Integration</span>
-                                <span class="tech-tag">Process Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 - Replace VIDEO_FILE_2.mp4 with your actual video filename -->
-                    <div class="showcase-card">
-                        <div class="showcase-media">
-                            <video controls>
-                                <source src="VIDEO_FILE_2.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="media-type-badge">🎥 VIDEO</div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-title">Quality Control AI System</div>
-                            <div class="showcase-description">
-                                AI-powered quality control system in action. Computer vision technology detecting defects and anomalies in real-time, ensuring 100% quality compliance.
-                                <br><br>
-                                <strong>Results:</strong> Zero defects shipped, automated inspection process, cost savings through prevention.
-                            </div>
-                            <div class="showcase-tech-stack">
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Quality Control</span>
-                                <span class="tech-tag">Real-time Processing</span>
-                                <span class="tech-tag">Defect Detection</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 - Replace IMAGE_FILE_3.jpg with your actual image filename -->
-                    <div class="showcase-card">
-                        <div class="showcase-media">
-                            <img src="IMAGE_FILE_3.jpg" alt="Training Content Generator">
-                            <div class="media-type-badge">📊 IMAGE</div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-title">AI Training Content Generator</div>
-                            <div class="showcase-description">
-                                Automated training material creation system. AI generates comprehensive training videos, manuals, and assessments for various operational procedures and safety protocols.
-                                <br><br>
-                                <strong>Benefits:</strong> Consistent training quality, rapid content creation, multilingual support.
-                            </div>
-                            <div class="showcase-tech-stack">
-                                <span class="tech-tag">Content Generation</span>
-                                <span class="tech-tag">Training Automation</span>
-                                <span class="tech-tag">Natural Language Processing</span>
-                                <span class="tech-tag">Educational Technology</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 - Replace VIDEO_FILE_3.mp4 with your actual video filename -->
-                    <div class="showcase-card">
-                        <div class="showcase-media">
-                            <video controls>
-                                <source src="VIDEO_FILE_3.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="media-type-badge">🎥 VIDEO</div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-title">Lean Manufacturing AI Implementation</div>
-                            <div class="showcase-description">
-                                Complete walkthrough of AI-enhanced Lean Manufacturing implementation. Shows Value Stream Mapping, waste elimination, and continuous improvement processes powered by artificial intelligence.
-                                <br><br>
-                                <strong>Transformation:</strong> 30% efficiency increase, 50% waste reduction, data-driven Kaizen.
-                            </div>
-                            <div class="showcase-tech-stack">
-                                <span class="tech-tag">Lean Manufacturing</span>
-                                <span class="tech-tag">Process Optimization</span>
-                                <span class="tech-tag">Industrial Engineering</span>
-                                <span class="tech-tag">Continuous Improvement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Guide for Adding More Content -->
-                <div class="add-more-guide">
-                    <h4>💡 Want to Add More Projects?</h4>
-                    <p>Follow the instructions below to easily add more images and videos to showcase your AI achievements!</p>
-                </div>
-
-                <div class="example-box">
-                    <h4>📋 How to Add More Showcase Items</h4>
-                    <p><strong>Step 1:</strong> Upload your image or video files to GitHub (same directory as index.html)</p>
-                    <p><strong>Step 2:</strong> Copy the template code below and paste it in the showcase-grid section</p>
-                    <p><strong>Step 3:</strong> Replace the placeholder values with your content</p>
-                    <br>
-                    <p><strong>Template for Images:</strong></p>
-                    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #00ffff; overflow-x: auto;">
-&lt;div class="showcase-card"&gt;
-    &lt;div class="showcase-media"&gt;
-        &lt;img src="YOUR_IMAGE_FILE.jpg" alt="Your Project Name"&gt;
-        &lt;div class="media-type-badge"&gt;📊 IMAGE&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="showcase-content"&gt;
-        &lt;div class="showcase-title"&gt;Your Project Title&lt;/div&gt;
-        &lt;div class="showcase-description"&gt;
-            Your project description and results...
-        &lt;/div&gt;
-        &lt;div class="showcase-tech-stack"&gt;
-            &lt;span class="tech-tag"&gt;Technology 1&lt;/span&gt;
-            &lt;span class="tech-tag"&gt;Technology 2&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-                    <br>
-                    <p><strong>Template for Videos:</strong></p>
-                    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #00ffff; overflow-x: auto;">
-&lt;div class="showcase-card"&gt;
-    &lt;div class="showcase-media"&gt;
-        &lt;video controls&gt;
-            &lt;source src="YOUR_VIDEO_FILE.mp4" type="video/mp4"&gt;
-            Your browser does not support the video tag.
-        &lt;/video&gt;
-        &lt;div class="media-type-badge"&gt;🎥 VIDEO&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="showcase-content"&gt;
-        &lt;div class="showcase-title"&gt;Your Video Title&lt;/div&gt;
-        &lt;div class="showcase-description"&gt;
-            Your video description and impact...
-        &lt;/div&gt;
-        &lt;div class="showcase-tech-stack"&gt;
-            &lt;span class="tech-tag"&gt;Technology 1&lt;/span&gt;
-            &lt;span class="tech-tag"&gt;Technology 2&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
                 </div>
             </div>
 
@@ -1478,15 +663,15 @@
                     
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <div class="stat-value">3%</div>
+                            <div class="stat-value">2%</div>
                             <div class="stat-label">Reduced downtime</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">3%</div>
+                            <div class="stat-value">5%</div>
                             <div class="stat-label">Improved cutting speed</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">3%</div>
+                            <div class="stat-value">2%</div>
                             <div class="stat-label">Improved cutting output perimeter</div>
                         </div>
                     </div>
@@ -1620,6 +805,209 @@
                 </ul>
                 <div class="cta-quote">
                     "AI didn't replace me – it made me superhuman." 🦾
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Tools Tab -->
+        <div id="tools" class="tab-content">
+            <div class="section fade-in">
+                <h2>🤖 AI Tools Arsenal</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
+                    Strategic selection and utilization of cutting-edge AI platforms for maximum productivity and capability enhancement.
+                </p>
+
+                <div class="future-plans">
+                    <div class="plan-card">
+                        <h4>🧠 Claude (Anthropic)</h4>
+                        <ul>
+                            <li><strong>Primary Use:</strong> Complex data analysis and advanced reasoning</li>
+                            <li><strong>Strengths:</strong> Long-form content, analytical thinking, code generation</li>
+                            <li><strong>Applications:</strong> Technical documentation, process optimization, strategic planning</li>
+                            <li><strong>Key Features:</strong> Superior reasoning capabilities, excellent for industrial engineering tasks</li>
+                            <li><strong>Best For:</strong> Lean manufacturing analysis, statistical process control, value stream mapping</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card">
+                        <h4>💬 ChatGPT (OpenAI)</h4>
+                        <ul>
+                            <li><strong>Primary Use:</strong> Creative content and rapid prototyping</li>
+                            <li><strong>Strengths:</strong> Natural conversation, creative writing, quick responses</li>
+                            <li><strong>Applications:</strong> Presentation creation, training materials, brainstorming sessions</li>
+                            <li><strong>Key Features:</strong> Versatile conversational AI, excellent for ideation</li>
+                            <li><strong>Best For:</strong> Team communications, meeting summaries, creative problem-solving</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card">
+                        <h4>💎 Gemini (Google)</h4>
+                        <ul>
+                            <li><strong>Primary Use:</strong> Data integration and Google Workspace automation</li>
+                            <li><strong>Strengths:</strong> Seamless Google ecosystem integration, real-time data access</li>
+                            <li><strong>Applications:</strong> Spreadsheet automation, email management, calendar optimization</li>
+                            <li><strong>Key Features:</strong> Native Google services integration, multimodal capabilities</li>
+                            <li><strong>Best For:</strong> Workflow automation, data visualization, collaborative projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card">
+                        <h4>⚡ GenSpark</h4>
+                        <ul>
+                            <li><strong>Primary Use:</strong> Create Presentation</li>
+                            <li><strong>Strengths:</strong> -</li>
+                            <li><strong>Applications:</strong> -</li>
+                            <li><strong>Key Features:</strong> -</li>
+                            <li><strong>Best For:</strong>-</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>🎯 Tool Selection Strategy</h4>
+                    <div class="comparison">
+                        <div class="before">
+                            <h3>📊 Task-Based Selection</h3>
+                            <ul>
+                                <li><strong>Complex Analysis:</strong> Claude for in-depth reasoning</li>
+                                <li><strong>Quick Tasks:</strong> ChatGPT for rapid responses</li>
+                                <li><strong>Data Work:</strong> Gemini for Google integration</li>
+                                <li><strong>Specialized Needs:</strong> GenSpark for industry focus</li>
+                            </ul>
+                        </div>
+                        <div class="after">
+                            <h3>⚙️ Integration Approach</h3>
+                            <ul>
+                                <li><strong>Multi-Tool Workflows:</strong> Combine strengths of different platforms</li>
+                                <li><strong>Cross-Validation:</strong> Use multiple AI opinions for critical decisions</li>
+                                <li><strong>Specialized Deployment:</strong> Right tool for right job</li>
+                                <li><strong>Continuous Learning:</strong> Stay updated with new capabilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section fade-in">
+                <h2>🔐 Data Confidentiality & Security Management</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
+                    Comprehensive approach to maintaining data security while leveraging AI capabilities for business optimization.
+                </p>
+
+                <div class="future-plans">
+                    <div class="plan-card">
+                        <h4>🛡️ Data Classification & Handling</h4>
+                        <ul>
+                            <li><strong>Public Data:</strong> General industry information, publicly available benchmarks</li>
+                            <li><strong>Internal Data:</strong> Process descriptions, general workflow information</li>
+                            <li><strong>Confidential Data:</strong> Anonymized performance metrics, aggregated statistics</li>
+                            <li><strong>Restricted Data:</strong> Never shared - proprietary formulas, customer information, financial details</li>
+                            <li><strong>Data Sanitization:</strong> Remove all identifying information before AI processing</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card">
+                        <h4>🔒 Security Protocols</h4>
+                        <ul>
+                            <li><strong>Data Anonymization:</strong> Strip all personal and company identifiers</li>
+                            <li><strong>Generic Examples:</strong> Use hypothetical scenarios instead of real cases</li>
+                            <li><strong>Aggregated Data:</strong> Share only statistical summaries, never raw data</li>
+                            <li><strong>Time Delays:</strong> Use historical data with appropriate time buffers</li>
+                            <li><strong>Access Controls:</strong> Limit AI tool access to authorized personnel only</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card">
+                        <h4>📋 Compliance Framework</h4>
+                        <ul>
+                            <li><strong>Company Policy Adherence:</strong> Full compliance with corporate data policies</li>
+                            <li><strong>Industry Standards:</strong> Follow manufacturing industry best practices</li>
+                            <li><strong>Legal Requirements:</strong> Maintain compliance with data protection regulations</li>
+                            <li><strong>Audit Trails:</strong> Document all AI interactions for compliance verification</li>
+                            <li><strong>Regular Reviews:</strong> Periodic assessment of data handling practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card">
+                        <h4>⚡ Safe AI Practices</h4>
+                        <ul>
+                            <li><strong>Query Sanitization:</strong> Review all prompts before submission</li>
+                            <li><strong>Output Verification:</strong> Validate AI responses before implementation</li>
+                            <li><strong>Collaborative Approach:</strong> Team review for sensitive applications</li>
+                            <li><strong>Continuous Training:</strong> Stay updated on AI security best practices</li>
+                            <li><strong>Risk Assessment:</strong> Evaluate each AI application for potential risks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>✅ Data Security Best Practices</h4>
+                    <div class="comparison">
+                        <div class="before">
+                            <h3>❌ What NOT to Share</h3>
+                            <ul>
+                                <li>Customer names, contacts, or specific orders</li>
+                                <li>Proprietary manufacturing processes or recipes</li>
+                                <li>Financial data, costs, or pricing information</li>
+                                <li>Employee personal information or performance data</li>
+                                <li>Competitive intelligence or strategic plans</li>
+                                <li>Real-time production data or schedules</li>
+                            </ul>
+                        </div>
+                        <div class="after">
+                            <h3>✅ Safe to Share</h3>
+                            <ul>
+                                <li>General industry metrics and benchmarks</li>
+                                <li>Anonymized performance statistics</li>
+                                <li>Generic process optimization principles</li>
+                                <li>Public domain manufacturing knowledge</li>
+                                <li>Hypothetical scenarios and examples</li>
+                                <li>Educational content and training materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implementation-timeline">
+                    <h3 style="color: #ffff00; text-align: center; margin-bottom: 30px;">🔐 Data Security Implementation</h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-phase">Phase 1: Assessment & Classification</div>
+                        <ul>
+                            <li>Inventory all data types and classify by sensitivity level</li>
+                            <li>Develop data handling protocols for each classification</li>
+                            <li>Create AI usage guidelines and approval workflows</li>
+                            <li>Train team members on secure AI practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-phase">Phase 2: Implementation & Controls</div>
+                        <ul>
+                            <li>Deploy data anonymization tools and processes</li>
+                            <li>Establish secure AI interaction environments</li>
+                            <li>Implement audit logging for all AI activities</li>
+                            <li>Create incident response procedures</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-phase">Phase 3: Monitoring & Optimization</div>
+                        <ul>
+                            <li>Regular security audits and compliance checks</li>
+                            <li>Continuous improvement of security measures</li>
+                            <li>Advanced threat detection and prevention</li>
+                            <li>Industry best practice integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta fade-in">
+                    <h2>🛡️ Security-First AI Innovation</h2>
+                    <div class="cta-quote">
+                        "Innovation without security is just expensive vulnerability" 🔒
+                    </div>
+                    <p>Our approach balances maximum AI capability with unwavering data protection, ensuring sustainable and responsible technological advancement.</p>
                 </div>
             </div>
         </div>
@@ -1785,26 +1173,26 @@
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value">5%+</div>
-                            <div class="stat-label">VAR Rate improve</div>
+                            <div class="stat-label">VAR Rate Improvement</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value">98.5%</div>
                             <div class="stat-label">First Pass Yield (FPY)</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">3%</div>
+                            <div class="stat-value">5%</div>
                             <div class="stat-label">Lead Time Reduction</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value">2%</div>
-                            <div class="stat-label">Cost per minute reduction</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">15%</div>
-                            <div class="stat-label">Inventory Reduction</div>
+                            <div class="stat-label">Cost Per Minute reduction</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value">5%</div>
+                            <div class="stat-label">Inventory Reduction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">10%</div>
                             <div class="stat-label">Setup Time Reduction (SMED)</div>
                         </div>
                         <div class="stat-item">
