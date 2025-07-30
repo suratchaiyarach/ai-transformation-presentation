@@ -464,7 +464,341 @@
             text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
         }
 
-        /* Responsive Design */
+        /* Showcase Styles */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .showcase-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+        }
+
+        .showcase-media {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .showcase-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .showcase-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .showcase-card:hover .showcase-media img {
+            transform: scale(1.05);
+        }
+
+        .media-type-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #00ffff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .showcase-content {
+            padding: 25px;
+        }
+
+        .showcase-title {
+            color: #00ffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .showcase-description {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .showcase-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(45deg, rgba(255, 255, 0, 0.2), rgba(255, 0, 255, 0.2));
+            border: 1px solid rgba(255, 255, 0, 0.5);
+            color: #ffff00;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .add-more-guide {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            border: 2px dashed rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            color: #00ffff;
+            margin: 30px 0;
+        }
+
+        .add-more-guide h4 {
+            color: #ffff00;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* AI Tools Styles */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .ai-tool-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .ai-tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+            border-color: #00ffff;
+        }
+
+        .ai-tool-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+            border-radius: 15px;
+            z-index: -1;
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ai-tool-card:hover::before {
+            opacity: 0.3;
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-right: 20px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
+        }
+
+        .tool-info h3 {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .tool-info .tool-company {
+            color: #ffff00;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .tool-description {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tool-use-cases {
+            margin-bottom: 20px;
+        }
+
+        .tool-use-cases h4 {
+            color: #ffff00;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .use-case-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .use-case-list li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .use-case-list li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: #00ffff;
+        }
+
+        .tool-rating {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .rating-label {
+            color: #ffff00;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .stars {
+            color: #ffff00;
+            font-size: 1.2rem;
+        }
+
+        .confidentiality-section {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 255, 0, 0.1));
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .confidentiality-section h2 {
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .confidentiality-section h2::after {
+            background: linear-gradient(90deg, #ff6b6b, #ffff00);
+        }
+
+        .confidentiality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .confidentiality-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .confidentiality-card h4 {
+            color: #ffff00;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .confidentiality-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .confidentiality-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .confidentiality-card li::before {
+            content: '🔒';
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        .security-highlight {
+            background: linear-gradient(45deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 255, 0.1));
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .security-highlight h3 {
+            color: #51cf66;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design for AI Tools */
+        @media (max-width: 768px) {
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .confidentiality-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .tool-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        @media (max-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .showcase-media {
+                height: 200px;
+            }
+        }
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5rem;
@@ -510,7 +844,7 @@
     <div class="header">
         <div class="container">
             <h1>🤖 Transforming My Work Routine with AI by Surat Chaiyarach [M]</h1>
-            <h2>How AI Tools Revolutionized My Daily Productivity in Lean Engineer</h2>
+            <h2>How AI Tools Revolutionized My Daily Productivity</h2>
         </div>
     </div>
 
@@ -523,6 +857,8 @@
             <button class="tab-button" onclick="showTab('creative')">🎨 Creative</button>
             <button class="tab-button" onclick="showTab('impact')">📈 Impact</button>
             <button class="tab-button" onclick="showTab('future')">🚀 Future Plans</button>
+            <button class="tab-button" onclick="showTab('showcase')">🏆 Showcase</button>
+            <button class="tab-button" onclick="showTab('aitools')">🤖 AI Tools</button>
         </div>
     </nav>
 
@@ -538,10 +874,273 @@
                     <p>Welcome to my comprehensive overview of how AI has revolutionized my work routine and productivity. This presentation showcases the measurable impact and breakthrough capabilities achieved through strategic AI implementation.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- AI Tools Tab -->
+        <div id="aitools" class="tab-content">
+            <div class="section fade-in">
+                <h2>🤖 AI Tools Arsenal</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
+                    Strategic selection of AI platforms that power my productivity transformation - each chosen for specific strengths and capabilities.
+                </p>
+
+                <div class="ai-tools-grid">
+                    <!-- Claude AI Tool -->
+                    <div class="ai-tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🧠</div>
+                            <div class="tool-info">
+                                <h3>Claude</h3>
+                                <div class="tool-company">by Anthropic</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Advanced AI assistant excelling in complex reasoning, analysis, and professional content creation. My primary tool for strategic planning, detailed documentation, and sophisticated problem-solving tasks.
+                        </div>
+                        <div class="tool-use-cases">
+                            <h4>Primary Use Cases:</h4>
+                            <ul class="use-case-list">
+                                <li>Coding and building an application</li>
+                                <li>Complex data analysis and interpretation</li>
+                                <li>Coding and Building application</li>
+                                <li>Process optimization recommendations</li>
+                                <li>Industrial Engineering calculations</li>
+                                <li>Lean Manufacturing strategy development</li>
+                            </ul>
+                        </div>
+                        <div class="tool-rating">
+                            <span class="rating-label">Effectiveness:</span>
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- ChatGPT Tool -->
+                    <div class="ai-tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">💬</div>
+                            <div class="tool-info">
+                                <h3>ChatGPT</h3>
+                                <div class="tool-company">by OpenAI</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Versatile conversational AI perfect for brainstorming, quick content generation, and iterative problem-solving. Excellent for rapid prototyping of ideas and creative content development.
+                        </div>
+                        <div class="tool-use-cases">
+                            <h4>Primary Use Cases:</h4>
+                            <ul class="use-case-list">
+                                <li>Learning English</li>
+                                <li>Email and communication drafting</li>
+                                <li>Brainstorming and idea generation</li>
+                                <li>Quick data formatting and cleaning</li>
+                                <li>Meeting agenda and summary creation</li>
+                                <li>Process improvement ideation</li>
+                            </ul>
+                        </div>
+                        <div class="tool-rating">
+                            <span class="rating-label">Effectiveness:</span>
+                            <span class="stars">⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- Gemini Tool -->
+                    <div class="ai-tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">💎</div>
+                            <div class="tool-info">
+                                <h3>Gemini</h3>
+                                <div class="tool-company">by Google</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Google's multimodal AI offering strong integration with Google Workspace and excellent performance in research, data analysis, and multilingual tasks. Particularly useful for international operations.
+                        </div>
+                        <div class="tool-use-cases">
+                            <h4>Primary Use Cases:</h4>
+                            <ul class="use-case-list">
+                                <li>Google Sheets data analysis automation</li>
+                                <li>Research and competitive analysis</li>
+                                <li>Multilingual content translation</li>
+                                <li>VDO generation with VEO3</li>
+                            </ul>
+                        </div>
+                        <div class="tool-rating">
+                            <span class="rating-label">Effectiveness:</span>
+                            <span class="stars">⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- GenSpark Tool -->
+                    <div class="ai-tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">⚡</div>
+                            <div class="tool-info">
+                                <h3>GenSpark</h3>
+                                <div class="tool-company">AI Search Engine</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Next-generation AI search engine that provides comprehensive, well-researched answers with real-time information. Excellent for staying current with industry trends and best practices.
+                        </div>
+                        <div class="tool-use-cases">
+                            <h4>Primary Use Cases:</h4>
+                            <ul class="use-case-list">
+                                <li>Create Presentation</li>
+                            </ul>
+                        </div>
+                        <div class="tool-rating">
+                            <span class="rating-label">Effectiveness:</span>
+                            <span class="stars">⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+            <!-- Data Confidentiality Section -->
+            <div class="confidentiality-section fade-in">
+                <h2>🔒 Data Confidentiality & Security Management</h2>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">
+                    Comprehensive approach to maintaining data security and confidentiality while leveraging AI tools for maximum productivity.
+                </p>
+
+                <div class="security-highlight">
+                    <h3>🛡️ Zero Sensitive Data Exposure Policy</h3>
+                    <p>All AI interactions follow strict protocols to ensure no confidential company data, personal information, or proprietary processes are ever shared with external AI services.</p>
+                </div>
+
+                <div class="confidentiality-grid">
+                    <div class="confidentiality-card">
+                        <h4>📊 Data Classification & Handling</h4>
+                        <ul>
+                            <li>Clear data classification system (Public, Internal, Confidential, Restricted)</li>
+                            <li>Only anonymized and generalized data used for AI assistance</li>
+                            <li>Removal of all identifying information before processing</li>
+                            <li>Template-based approaches for sensitive analyses</li>
+                            <li>Regular data handling protocol reviews and updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="confidentiality-card">
+                        <h4>🔐 Access Control & Authentication</h4>
+                        <ul>
+                            <li>Multi-factor authentication on all AI platforms</li>
+                            <li>Regular password updates and security reviews</li>
+                            <li>Controlled access to AI tools through approved channels</li>
+                            <li>Session management and automatic logout policies</li>
+                            <li>Device-level security controls and monitoring</li>
+                        </ul>
+                    </div>
+
+                    <div class="confidentiality-card">
+                        <h4>📝 Content Sanitization Process</h4>
+                        <ul>
+                            <li>Systematic removal of specific company names and identifiers</li>
+                            <li>Replacement of actual numbers with representative examples</li>
+                            <li>Use of generic industry terminology instead of proprietary terms</li>
+                            <li>Focus on methodologies rather than specific implementations</li>
+                            <li>Pre-submission content review checklist</li>
+                        </ul>
+                    </div>
+
+                    <div class="confidentiality-card">
+                        <h4>🔍 Monitoring & Compliance</h4>
+                        <ul>
+                            <li>Regular audit trails of AI tool usage and content</li>
+                            <li>Compliance verification with company data policies</li>
+                            <li>Incident reporting and response procedures</li>
+                            <li>Staff training on data confidentiality best practices</li>
+                            <li>Continuous improvement of security protocols</li>
+                        </ul>
+                    </div>
+
+                    <div class="confidentiality-card">
+                        <h4>⚖️ Legal & Regulatory Compliance</h4>
+                        <ul>
+                            <li>Adherence to industry-specific data protection regulations</li>
+                            <li>Compliance with international data privacy laws (GDPR, etc.)</li>
+                            <li>Regular legal review of AI tool terms of service</li>
+                            <li>Documentation of compliance measures and procedures</li>
+                            <li>Coordination with legal and IT security teams</li>
+                        </ul>
+                    </div>
+
+                    <div class="confidentiality-card">
+                        <h4>🛠️ Technical Safeguards</h4>
+                        <ul>
+                            <li>Use of secure, encrypted connections for all AI interactions</li>
+                            <li>Local data processing where possible before AI consultation</li>
+                            <li>Regular backup and secure deletion of conversation histories</li>
+                            <li>Network-level security controls and monitoring</li>
+                            <li>Endpoint protection and data loss prevention tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>✅ Best Practice Example</h4>
+                    <p><strong>Instead of:</strong> "Our Acme Corp factory produces 50,000 units of Model X garments with 3.2% defect rate using proprietary Process Alpha..."</p>
+                    <br>
+                    <p><strong>I use:</strong> "A typical garment factory producing medium-volume orders might experience defect rates around 3%, which can be improved through statistical process control methods..."</p>
+                    <br>
+                    <p><strong>Result:</strong> Valuable AI insights without exposing any confidential company information, product details, or proprietary processes.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Data Confidentiality Maintained</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Security Incidents</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Security Monitoring</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">Monthly</div>
+                        <div class="stat-label">Security Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Showcase Tab -->
+        <div id="showcase" class="tab-content">
+            <div class="section fade-in">
+                <h2>🏆 AI Projects Showcase</h2>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
+                    Real implementations and achievements - showcasing completed AI solutions with measurable results and visual demonstrations.
+                </p>
+
+                <div class="showcase-grid">
+                    <!-- Project 1 - Replace IMAGE_FILE_1.jpg with your actual image filename -->
+                    <div class="showcase-card">
+                        <div class="showcase-media">
+                            <img src="IMAGE_FILE_1.jpg" alt="AI Data Analytics Dashboard">
+                            <div class="media-type-badge">📊 IMAGE</div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-title">Production Analytics Dashboard</div>
+                            <div class="showcase-description">
+                                AI-powered real-time dashboard that transformed our data analysis process. Automated data collection from multiple sources, providing instant insights and predictive analytics for production optimization.
+                                <br><br>
+                                <strong>Results:</strong> 90% time reduction, 100% accuracy, real-time decision making capability.
+                            </div>
+                            <div class="showcase-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">Real-time Analytics</span>
+                            </div>
+                        </div>
+                    </div>
 
             <div class="achievements fade-in">
                 <div class="achievement-card">
-                    <div class="achievement-number">30%</div>
+                    <div class="achievement-number">90%</div>
                     <div class="achievement-text">📊 Reduction in data analytics time</div>
                 </div>
                 <div class="achievement-card">
@@ -583,7 +1182,7 @@
                     <div class="after">
                         <h3>🚀 After AI</h3>
                         <ul>
-                            <li>⏱️ 1 hour per day with AI assistance</li>
+                            <li>⏱️ 30 minutes per day with AI assistance</li>
                             <li>🎯 100% data accuracy with automated validation</li>
                             <li>🚀 Advanced insights previously impossible</li>
                             <li>💡 Predictive forecasting capabilities</li>
@@ -662,16 +1261,16 @@
                     
                     <div class="stats-grid">
                         <div class="stat-item">
+                            <div class="stat-value">5%</div>
+                            <div class="stat-label">Reduced downtime</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3%</div>
+                            <div class="stat-label">Improved cutting speed</div>
+                        </div>
+                        <div class="stat-item">
                             <div class="stat-value">10%</div>
-                            <div class="stat-label">Reduced QCO downtime</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">5%</div>
                             <div class="stat-label">Improved cutting perimeter output</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">5%</div>
-                            <div class="stat-label">Increrased cutting speed</div>
                         </div>
                     </div>
 
@@ -969,36 +1568,33 @@
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-value">5%+</div>
-                            <div class="stat-label">VAR % improvement</div>
+                            <div class="stat-label">VAR Rate improvement</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value">98.5%</div>
                             <div class="stat-label">First Pass Yield (FPY)</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">5%</div>
+                            <div class="stat-value">3%</div>
                             <div class="stat-label">Lead Time Reduction</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">3%</div>
-                            <div class="stat-label">Labor Productivity Increase</div>
+                            <div class="stat-value">2%</div>
+                            <div class="stat-label">Cost per minute reduction</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">5%</div>
+                            <div class="stat-value">75%</div>
                             <div class="stat-label">Inventory Reduction</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">10%</div>
+                            <div class="stat-value">2%</div>
                             <div class="stat-label">Setup Time Reduction (SMED)</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-value">98%</div>
+                            <div class="stat-value">95%</div>
                             <div class="stat-label">On-Time Delivery Rate</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-value">2%</div>
-                            <div class="stat-label">Cost Per minute Reduction</div>
-                        </div>
+                        
                     </div>
                 </div>
 
